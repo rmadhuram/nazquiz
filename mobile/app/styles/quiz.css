@@ -1,0 +1,41 @@
+.conduct-screen .pull-right {
+    float: right;
+    width: 50%;
+}
+
+.conduct-screen .pull-left {
+    float: left;
+    width: 50%;
+}
+
+.conduct-screen .team-name {
+    text-align:center;
+    background: #ccc;
+}
+
+.conduct-screen .team-1 {
+    border-bottom: 2px solid black;
+}
+
+.conduct-screen .team-2 {
+    border-bottom: 2px solid #eb943b;
+}
+
+.conduct-screen .clear {
+    clear: both;
+}
+
+.conduct-screen .right-wrong {
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 3px;
+    border: 1px solid #ccc;
+    background: yellow;
+    margin-right: 10px;
+}
+
+.conduct-screen .individual-score {
+    display: inline-block;
+    margin-left: 10px;
+    color: green;
+}

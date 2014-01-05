@@ -1,0 +1,12 @@
+{
+  "name": "mobile",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jquery-mobile": "1.4.0",
+    "handlebars": "*",
+    "touch": "https://github.com/yeco/jquery-ui-touch-punch.git"
+
+  }
+}
