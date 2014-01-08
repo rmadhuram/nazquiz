@@ -3,7 +3,8 @@
  * @author rmadhuram
  */
 var restify = require('restify'),
-    db = require('./persist/db.js').db;
+    db = require('./persist/db.js').db,
+    player = require('./services/player.js');
 
 
 /**
@@ -31,8 +32,12 @@ function players(req, res, next) {
 }
 
 var server = restify.createServer();
+server.use(restify.bodyParser());
+
 server.get('/hello', ok);
-server.get('/players', players);
+server.get('/player/:id', player.getPlayer);
+server.post('/player', player.addPlayer);
+
 
 server.listen(80, function() {
   console.log('%s listening at %s', server.name, server.url);
