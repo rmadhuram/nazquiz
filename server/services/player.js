@@ -5,7 +5,20 @@ var db = require('../persist/db.js').db;
  * Get player info
  */
 exports.getPlayer = function(req, res, next) {
-   res.send({name: 'Test', id: req.params.id});
+    var queryString = 'SELECT * FROM Players WHERE id = ?';
+ 
+    var result = "error!";
+    connection.query(queryString, [req.params.id], function(err, rows, fields) {
+      if (err) {
+        result = err;
+        throw err;
+      }
+
+      console.log('The players list is;: ' + rows);
+      result = rows;
+      res.send(result);
+    });
+
 };
 
 
